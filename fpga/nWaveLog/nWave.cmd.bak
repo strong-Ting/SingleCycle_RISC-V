@@ -1,0 +1,165 @@
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/home/DICS/M10912039/RISC-V/SingleCycle_RISC-V/fpga/wave.fsdb}
+wvResizeWindow -win $_nWave1 0 23 1536 801
+wvGetSignalOpen -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvOpenFile -win $_nWave1 \
+           {/home/DICS/M10912039/RISC-V/SingleCycle_RISC-V/fpga/novas.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/altera_generic_pll_functions"
+wvGetSignalSetScope -win $_nWave1 "/test"
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/test/clk} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 )} 
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvResizeWindow -win $_nWave1 568 220 960 332
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvResizeWindow -win $_nWave1 1536 23 1344 777
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test/RAM_2PORT_inst"
+wvGetSignalSetScope -win $_nWave1 "/test/RAM_2PORT_inst/altsyncram_component"
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default"
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default/altsyncram_inst"
+wvGetSignalSetScope -win $_nWave1 "/test"
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/test/clk} \
+{/test/address_a\[15:0\]} \
+{/test/address_b\[15:0\]} \
+{/test/data_a\[31:0\]} \
+{/test/data_b\[31:0\]} \
+{/test/q_a\[31:0\]} \
+{/test/q_b\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 2 3 4 5 6 7 )} 
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/test/clk} \
+{/test/address_a\[15:0\]} \
+{/test/address_b\[15:0\]} \
+{/test/data_a\[31:0\]} \
+{/test/data_b\[31:0\]} \
+{/test/q_a\[31:0\]} \
+{/test/q_b\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 2 3 4 5 6 7 )} 
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 6 7 )} 
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 161.880312 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalClose -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default/altsyncram_inst/dev"
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default/altsyncram_inst/mem"
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default/altsyncram_inst/dev"
+wvGetSignalClose -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default/altsyncram_inst/dev"
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default/altsyncram_inst/mem"
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default/altsyncram_inst/dev"
+wvGetSignalSetSignalFilter -win $_nWave1 "*"
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/test/clk} \
+{/test/address_a\[15:0\]} \
+{/test/address_b\[15:0\]} \
+{/test/data_a\[31:0\]} \
+{/test/data_b\[31:0\]} \
+{/test/q_a\[31:0\]} \
+{/test/q_b\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default/altsyncram_inst/mem"
+wvGetSignalSetSignalFilter -win $_nWave1 "*"
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/test/clk} \
+{/test/address_a\[15:0\]} \
+{/test/address_b\[15:0\]} \
+{/test/data_a\[31:0\]} \
+{/test/data_b\[31:0\]} \
+{/test/q_a\[31:0\]} \
+{/test/q_b\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default"
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default/altsyncram_inst"
+wvGetSignalSetScope -win $_nWave1 \
+           "/test/RAM_2PORT_inst/altsyncram_component/m_default"
+wvGetSignalSetScope -win $_nWave1 "/test/RAM_2PORT_inst/altsyncram_component"
+wvGetSignalSetScope -win $_nWave1 "/test/RAM_2PORT_inst"
+wvGetSignalSetScope -win $_nWave1 "/test"
+wvExit
