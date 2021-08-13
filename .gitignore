@@ -2,3 +2,9 @@ simv.daidir/
 simv
 ucli.key
 csrc
+INCA_libs/
+irun.*
+ncverilog.*
+verdiLog
+novas_dump.log
+novas.conf
