@@ -1,6 +1,8 @@
 `define CYCLE 10
 `define END 1000
-module test;
+`define instr "add"
+`define HexPath {"./asm/",`instr,"/",`instr,".hex"} 
+module test #(parameter Path = "./asm/add/add.hex");
 
 reg clk;
 reg [15:0] addr;
@@ -9,7 +11,7 @@ reg [3:0] write;
 reg [31:0] DATA_IN;
 wire [31:0] DATA_OUT;
 
-ram r1(
+ram  r1(
     .clk(clk),
     .addr(addr),
     .read(read),
@@ -17,6 +19,11 @@ ram r1(
     .DATA_IN(DATA_IN),
     .DATA_OUT(DATA_OUT)
 );
+initial begin
+    string strr = `HexPath;
+    $display("%s",`HexPath);
+    $readmemh(`HexPath,r1.mem);
+end
 
 always #(`CYCLE/2) clk = ~clk;
 

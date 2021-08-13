@@ -1,4 +1,4 @@
-module ram #(parameter HexPath = "../sim/asm/elf.hex")
+module ram 
 (
     input clk,
     input [15:0] addr,
@@ -8,10 +8,6 @@ module ram #(parameter HexPath = "../sim/asm/elf.hex")
     output reg [31:0] DATA_OUT
 );
 reg [31:0] mem [0:65535];
-
-initial begin
-    $readmemh(HexPath,mem);
-end
 
 always @(posedge clk) begin
     if(read) DATA_OUT <= mem[addr];
