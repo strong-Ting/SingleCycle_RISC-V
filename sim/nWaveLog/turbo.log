@@ -1,0 +1,3 @@
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas -nWave test.fsdb
+uname(Linux icsdws20.ee.yuntech.edu.tw 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64)
+au time 20.980538 1.242442 0.219560 delta 299106304 299106304 total 722653184 722653184

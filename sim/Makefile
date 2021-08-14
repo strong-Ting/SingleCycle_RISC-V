@@ -1,11 +1,12 @@
 
 instr =add
+rtlFile = ../rtl/top.sv ../rtl/CPU.sv ../rtl/ram.sv
 
 irun: ./asm/$(instr)/$(instr).hex
-	irun -sv test.sv ../rtl/ram.sv +access+r +define+instr='"$(instr)"'
+	irun -sv tb.sv $(rtlFile) +access+r +define+instr='"$(instr)"'
 
 vcs: ./asm/$(instr)/$(instr).hex
-	vcs -R -sverilog test.sv ../rtl/ram.sv +vcs+fsdbon +define+instr='"$(instr)"'
+	vcs -R -sverilog tb.sv $(rtlFile) +vcs+fsdbon +define+instr='"$(instr)"'
 
 ./asm/$(instr)/$(instr).hex:
 	$(MAKE) -C asm/ build instr=$(instr)

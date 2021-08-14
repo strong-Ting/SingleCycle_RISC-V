@@ -7,10 +7,22 @@ export RISCV_GCC ?= $(CROSS_PREFIX)gcc
 export RISCV_OBJDUMP ?= $(CROSS_PREFIX)objdump -xsd
 export RISCV_OBJCOPY ?= $(CROSS_PREFIX)objcopy -O ihex
 export ELF2HEX ?= ./elf2hex
-LDFILE := link.ld
-CFLAGS := -march=rv32im -mabi=ilp32
-LDFLAGS := -static -nostdlib -nostartfiles -march=rv32i -mabi=ilp32 -T$(LDFILE) -lgcc
+export OVPSIM ?= ./riscv-ovpsim/riscvOVPsim.exe
 
+LDFILE := instr.ld
+CFLAGS := -march=rv32im -mabi=ilp32
+LDFLAGS := -static -nostdlib -nostartfiles -march=rv32i -mabi=ilp32 -T $(LDFILE) -lgcc
+
+OVPSIM_FLAGS := --program $(ELF_NAME) \
+    --variant RVB32I \
+    --signaturedump \
+    --override riscvOVPsim/cpu/sigdump/SignatureFile=$(instr)/$(instr).sig.dat.hex \
+    --override riscvOVPsim/cpu/sigdump/StartAddress=0x100 \
+    --override riscvOVPsim/cpu/sigdump/SignatureGranularity=4 \
+    --override riscvOVPsim/cpu/sigdump/ByteCount=16 \
+    --override riscvOVPsim/cpu/sigdump/SignatureAtEnd=T \
+    --logfile $(instr)/$(instr).sig.run.log \
+	--finishafter 50
 
 SRC_C := $(wildcard ./$(instr)/*.c)
 OBJ_C := $(patsubst %.c,%.o,$(SRC_C))
@@ -23,8 +35,10 @@ OBJ := $(OBJ_C) $(OBJ_S)
 
 .PHONY: all enter_dir
 
-build: build_elf build_log build_hex
+build: build_elf build_log build_hex build_sig
 	
+build_sig: 
+	$(OVPSIM) $(OVPSIM_FLAGS)
 
 build_elf: $(OBJ) | $(LDFILE)
 	$(RISCV_GCC) $^ $(LDFLAGS) -o $(ELF_NAME)
@@ -39,9 +53,10 @@ build_hex: $(ELF_NAME)
 	$(RISCV_GCC) -c $(CFLAGS) $^ -o $(ELF_NAME).o
 
 %.o: %.c
-	$(RISCV_GCC) -c $(CFLAGS) $^
+	$(RISCV_GCC) -c $(CFLAGS) $^ -o $(ELF_NAME).o
 
 .PHONY: clean
 
 clean:
-	rm -rf $(ELF_NAME) $(ELF_NAME).log $(ELF_NAME)*.hex *.o
+	rm -rf $(ELF_NAME) $(ELF_NAME).log $(ELF_NAME)*.hex *.o $(ELF_NAME).sig.dat.hex $(ELF_NAME).sig.run.log
+#spike --isa=RV32I -d pk add
