@@ -7,7 +7,7 @@ export RISCV_GCC ?= $(CROSS_PREFIX)gcc
 export RISCV_OBJDUMP ?= $(CROSS_PREFIX)objdump -xsd
 export RISCV_OBJCOPY ?= $(CROSS_PREFIX)objcopy -O ihex
 export ELF2HEX ?= ./elf2hex
-export OVPSIM ?= ./riscv-ovpsim/riscvOVPsim.exe
+export OVPSIM ?= ../../tools/riscv-ovpsim/riscvOVPsim.exe
 
 LDFILE := instr.ld
 CFLAGS := -march=rv32im -mabi=ilp32
@@ -58,5 +58,4 @@ build_hex: $(ELF_NAME)
 .PHONY: clean
 
 clean:
-	rm -rf $(ELF_NAME) $(ELF_NAME).log $(ELF_NAME)*.hex *.o $(ELF_NAME).sig.dat.hex $(ELF_NAME).sig.run.log
-#spike --isa=RV32I -d pk add
+	rm -rf $(ELF_NAME) $(ELF_NAME).log $(ELF_NAME)*.hex $(ELF_NAME)*.o $(ELF_NAME).sig.dat.hex $(ELF_NAME).sig.run.log
