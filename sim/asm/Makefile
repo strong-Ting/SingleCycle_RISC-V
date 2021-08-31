@@ -14,7 +14,7 @@ CFLAGS := -march=rv32im -mabi=ilp32
 LDFLAGS := -static -nostdlib -nostartfiles -march=rv32i -mabi=ilp32 -T $(LDFILE) -lgcc
 
 OVPSIM_FLAGS := --program $(ELF_NAME) \
-    --variant RVB32I \
+    --variant RV32IM \
     --signaturedump \
     --override riscvOVPsim/cpu/sigdump/SignatureFile=$(instr)/$(instr).sig.dat.hex \
     --override riscvOVPsim/cpu/sigdump/StartAddress=0x100 \
@@ -22,7 +22,11 @@ OVPSIM_FLAGS := --program $(ELF_NAME) \
     --override riscvOVPsim/cpu/sigdump/ByteCount=16 \
     --override riscvOVPsim/cpu/sigdump/SignatureAtEnd=T \
     --logfile $(instr)/$(instr).sig.run.log \
-	--finishafter 50
+	--finishonopcode 0x20000413 #la _test_end
+	#--finishafter 30
+	#--finishonaddress 0x54
+	
+	
 
 SRC_C := $(wildcard ./$(instr)/*.c)
 OBJ_C := $(patsubst %.c,%.o,$(SRC_C))
@@ -33,11 +37,11 @@ OBJ := $(OBJ_C) $(OBJ_S)
 
 .SUFFIXES: .o .S .c
 
-.PHONY: all enter_dir
+.PHONY: all enter_dir build_sig
 
 build: build_elf build_log build_hex build_sig
 	
-build_sig: 
+build_sig: #$(instr)/$(instr).sig.dat.hex
 	$(OVPSIM) $(OVPSIM_FLAGS)
 
 build_elf: $(OBJ) | $(LDFILE)
@@ -55,7 +59,7 @@ build_hex: $(ELF_NAME)
 %.o: %.c
 	$(RISCV_GCC) -c $(CFLAGS) $^ -o $(ELF_NAME).o
 
-.PHONY: clean
+.PHONY: clean 
 
 clean:
 	rm -rf $(ELF_NAME) $(ELF_NAME).log $(ELF_NAME)*.hex $(ELF_NAME)*.o $(ELF_NAME).sig.dat.hex $(ELF_NAME).sig.run.log

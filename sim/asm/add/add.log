@@ -1,6 +1,6 @@
 
-sub/sub:     file format elf32-littleriscv
-sub/sub
+add/add:     file format elf32-littleriscv
+add/add
 architecture: riscv:rv32, flags 0x00000112:
 EXEC_P, HAS_SYMS, D_PAGED
 start address 0x00000000
@@ -28,10 +28,10 @@ SYMBOL TABLE:
 
 
 Contents of section .text:
- 0000 13040010 93020000 1303f0ff b3826240  ..............b@
- 0010 b3826240 b3826240 b3826240 b3826240  ..b@..b@..b@..b@
- 0020 1303d0ff b3025340 b3025340 b3025340  ......S@..S@..S@
- 0030 b3025340 b3025340 23205400 23220400  ..S@..S@# T.#"..
+ 0000 13040010 9302f0ff 1303f0ff b3826200  ..............b.
+ 0010 b3826200 b3826200 b3826200 b3826200  ..b...b...b...b.
+ 0020 1303e0ff b3025300 b3025300 b3025300  ......S...S...S.
+ 0030 b3025300 b3025300 23205400 23220400  ..S...S.# T.#"..
  0040 23240400 23260400 13040020           #$..#&.....     
 Contents of section .riscv.attributes:
  0000 411e0000 00726973 63760001 14000000  A....riscv......
@@ -41,19 +41,19 @@ Disassembly of section .text:
 
 00000000 <.text>:
    0:	10000413          	li	s0,256
-   4:	00000293          	li	t0,0
+   4:	fff00293          	li	t0,-1
    8:	fff00313          	li	t1,-1
-   c:	406282b3          	sub	t0,t0,t1
-  10:	406282b3          	sub	t0,t0,t1
-  14:	406282b3          	sub	t0,t0,t1
-  18:	406282b3          	sub	t0,t0,t1
-  1c:	406282b3          	sub	t0,t0,t1
-  20:	ffd00313          	li	t1,-3
-  24:	405302b3          	sub	t0,t1,t0
-  28:	405302b3          	sub	t0,t1,t0
-  2c:	405302b3          	sub	t0,t1,t0
-  30:	405302b3          	sub	t0,t1,t0
-  34:	405302b3          	sub	t0,t1,t0
+   c:	006282b3          	add	t0,t0,t1
+  10:	006282b3          	add	t0,t0,t1
+  14:	006282b3          	add	t0,t0,t1
+  18:	006282b3          	add	t0,t0,t1
+  1c:	006282b3          	add	t0,t0,t1
+  20:	ffe00313          	li	t1,-2
+  24:	005302b3          	add	t0,t1,t0
+  28:	005302b3          	add	t0,t1,t0
+  2c:	005302b3          	add	t0,t1,t0
+  30:	005302b3          	add	t0,t1,t0
+  34:	005302b3          	add	t0,t1,t0
   38:	00542023          	sw	t0,0(s0)
   3c:	00042223          	sw	zero,4(s0)
   40:	00042423          	sw	zero,8(s0)
