@@ -1,0 +1,38 @@
+# vsim -c work.test -do "run -all" 
+# Start time: 22:34:46 on Aug 31,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.5c linux Jul 20 2016
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.test(fast)
+# ** Warning: (vsim-PLI-3691) tb.sv(23): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /test File: tb.sv
+# ** Warning: (vsim-PLI-3003) tb.sv(35): [TOFD] - System task or function '$fsdbDumpfile' is not defined.
+#    Time: 0 ns  Iteration: 0  Instance: /test File: tb.sv
+# ** Warning: (vsim-PLI-3003) tb.sv(36): [TOFD] - System task or function '$fsdbDumpvars' is not defined.
+#    Time: 0 ns  Iteration: 0  Instance: /test File: tb.sv
+# ** Warning: (vsim-PLI-3003) tb.sv(37): [TOFD] - System task or function '$fsdbDumpMDA' is not defined.
+#    Time: 0 ns  Iteration: 0  Instance: /test File: tb.sv
+# run -all
+# ** Error (suppressible): (vsim-12023) tb.sv(35): Cannot execute undefined system task/function '$fsdbDumpfile'
+# ** Error (suppressible): (vsim-12023) tb.sv(36): Cannot execute undefined system task/function '$fsdbDumpvars'
+# ** Error (suppressible): (vsim-12023) tb.sv(37): Cannot execute undefined system task/function '$fsdbDumpMDA'
+# ****************************************************************
+# ***************sucessfull !!!!!!!*******************************
+# ****************************************************************
+# ** Note: $finish    : tb.sv(61)
+#    Time: 1 us  Iteration: 0  Instance: /test
+# End time: 22:34:50 on Aug 31,2021, Elapsed time: 0:00:04
+# Errors: 3, Warnings: 4

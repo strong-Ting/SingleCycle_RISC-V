@@ -1,0 +1,69 @@
+Info Session started: Tue Aug 31 22:07:04 2021
+
+Info ------------- ENVIRONMENT -------------
+Info LD_LIBRARY_PATH                          = /usr/cad/synopsys/verdi/cur//share/PLI/IUS/LINUX64
+Info LM_LICENSE_FILE                          = 1717@140.116.49.24:5280@140.110.117.10:26585@140.116.49.24:
+Info --------------------------------------
+Info -------- FLAGS (from ../../tools/riscv-ovpsim/riscvOVPsim.exe)
+Info --program  and/and
+Info --variant  RV32IM
+Info --signaturedump
+Info --override  riscvOVPsim/cpu/sigdump/SignatureFile=and/and.sig.dat.hex
+Info --override  riscvOVPsim/cpu/sigdump/StartAddress=0x100
+Info --override  riscvOVPsim/cpu/sigdump/SignatureGranularity=4
+Info --override  riscvOVPsim/cpu/sigdump/ByteCount=16
+Info --override  riscvOVPsim/cpu/sigdump/SignatureAtEnd=T
+Info --logfile  and/and.sig.run.log
+Info --finishonopcode  0x20000413
+Info --------------------------------------
+Imperas riscvOVPsim
+
+
+riscvOVPsim (64-Bit) v20210709.0 Open Virtual Platform simulator from www.IMPERAS.com.
+Copyright (c) 2005-2021 Imperas Software Ltd.  Contains Imperas Proprietary Information.
+Licensed Software, All Rights Reserved.
+Visit www.IMPERAS.com for multicore debug, verification and analysis solutions.
+
+riscvOVPsim started: Tue Aug 31 22:07:04 2021
+
+
+Info (OR_OF) Target 'riscvOVPsim/cpu' has object file read from 'and/and'
+Info (OR_PH) Program Headers:
+Info (OR_PH) Type           Offset     VirtAddr   PhysAddr   FileSiz    MemSiz     Flags Align
+Info (OR_PD) LOAD           0x00001000 0x00000000 0x00000000 0x00000054 0x00000054 R-E   1000
+Info (OR_PD) LOAD           0x00001100 0x00000100 0x00000100 0x00000000 0x00000100 RW-   1000
+Info (SIGNATURE_DUMP) Signature File enabled, file 'and/and.sig.dat.hex'.
+Info (SIGNATURE_DUMP) Extracting signature from 0x100 size 16 bytes
+Info (SIGNATURE_DUMP) Signature Write 1 0x100 bytes 4 0x0
+Info (EXC_FS) opcode match: Stopping at 0x50
+Info 
+Info ---------------------------------------------------
+Info CPU 'riscvOVPsim/cpu' STATISTICS
+Info   Type                  : riscv (RV32IM)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x54
+Info   Simulated instructions: 21
+Info   Simulated MIPS        : run too short for meaningful result
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info SIMULATION TIME STATISTICS
+Info   Simulated time        : 0.00 seconds
+Info   User time             : 0.00 seconds
+Info   System time           : 0.01 seconds
+Info   Elapsed time          : 0.00 seconds
+Info ---------------------------------------------------
+
+riscvOVPsim finished: Tue Aug 31 22:07:04 2021
+
+
+riscvOVPsim (64-Bit) v20210709.0 Open Virtual Platform simulator from www.IMPERAS.com.
+Visit www.IMPERAS.com for multicore debug, verification and analysis solutions.
+
+Info (SIGNATURE_DUMP) Destructor. Generate Signature file
+10305070
+00000000
+00000000
+00000000
+Info Session ended: Tue Aug 31 22:07:04 2021
+
