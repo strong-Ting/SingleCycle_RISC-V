@@ -440,3 +440,10 @@ wvScrollUp -win $_nWave1 1
 wvScrollUp -win $_nWave1 1
 wvScrollDown -win $_nWave1 0
 wvScrollUp -win $_nWave1 1
+wvResizeWindow -win $_nWave1 0 23 1920 1057
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvResizeWindow -win $_nWave1 0 23 1920 1057
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1

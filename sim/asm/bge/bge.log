@@ -1,0 +1,55 @@
+
+bge/bge:     file format elf32-littleriscv
+bge/bge
+architecture: riscv:rv32, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000000
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x0000002c memsz 0x0000002c flags r-x
+    LOAD off    0x00001100 vaddr 0x00000100 paddr 0x00000100 align 2**12
+         filesz 0x00000000 memsz 0x00000100 flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000002c  00000000  00000000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 _test         00000100  00000100  00000100  00001100  2**0
+                  ALLOC
+  2 .riscv.attributes 0000001f  00000000  00000000  0000102c  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000100 l    d  _test	00000000 _test
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 l    df *ABS*	00000000 bge/bge.o
+00000018 l       .text	00000000 end
+00000100 g       _test	00000000 _test_start
+00000200 g       _test	00000000 _test_end
+
+
+Contents of section .text:
+ 0000 13040010 9302f000 1303e000 63d66200  ............c.b.
+ 0010 93021000 13031000 23205400 23226400  ........# T.#"d.
+ 0020 23240400 23260400 13040020           #$..#&.....     
+Contents of section .riscv.attributes:
+ 0000 411e0000 00726973 63760001 14000000  A....riscv......
+ 0010 05727633 32693270 305f6d32 703000    .rv32i2p0_m2p0. 
+
+Disassembly of section .text:
+
+00000000 <end-0x18>:
+   0:	10000413          	li	s0,256
+   4:	00f00293          	li	t0,15
+   8:	00e00313          	li	t1,14
+   c:	0062d663          	bge	t0,t1,18 <end>
+  10:	00100293          	li	t0,1
+  14:	00100313          	li	t1,1
+
+00000018 <end>:
+  18:	00542023          	sw	t0,0(s0)
+  1c:	00642223          	sw	t1,4(s0)
+  20:	00042423          	sw	zero,8(s0)
+  24:	00042623          	sw	zero,12(s0)
+  28:	20000413          	li	s0,512

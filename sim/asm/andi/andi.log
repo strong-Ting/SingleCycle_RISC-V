@@ -1,0 +1,60 @@
+
+andi/andi:     file format elf32-littleriscv
+andi/andi
+architecture: riscv:rv32, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000000
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x00000048 memsz 0x00000048 flags r-x
+    LOAD off    0x00001100 vaddr 0x00000100 paddr 0x00000100 align 2**12
+         filesz 0x00000000 memsz 0x00000100 flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000048  00000000  00000000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 _test         00000100  00000100  00000100  00001100  2**0
+                  ALLOC
+  2 .riscv.attributes 0000001f  00000000  00000000  00001048  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000100 l    d  _test	00000000 _test
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000100 g       _test	00000000 _test_start
+00000200 g       _test	00000000 _test_end
+
+
+Contents of section .text:
+ 0000 13040010 b7f2cdab 938282f9 93f232eb  ..............2.
+ 0010 93f242f4 93f29220 93f272e8 93f25235  ..B.... ..r...R5
+ 0020 37533412 13038367 9373137f 137ea30d  7S4....g.s...~..
+ 0030 937e43ec 23205400 23227400 2324c401  .~C.# T.#"t.#$..
+ 0040 2326d401 13040020                    #&.....         
+Contents of section .riscv.attributes:
+ 0000 411e0000 00726973 63760001 14000000  A....riscv......
+ 0010 05727633 32693270 305f6d32 703000    .rv32i2p0_m2p0. 
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	10000413          	li	s0,256
+   4:	abcdf2b7          	lui	t0,0xabcdf
+   8:	f9828293          	addi	t0,t0,-104 # abcdef98 <_test_end+0xabcded98>
+   c:	eb32f293          	andi	t0,t0,-333
+  10:	f442f293          	andi	t0,t0,-188
+  14:	2092f293          	andi	t0,t0,521
+  18:	e872f293          	andi	t0,t0,-377
+  1c:	3552f293          	andi	t0,t0,853
+  20:	12345337          	lui	t1,0x12345
+  24:	67830313          	addi	t1,t1,1656 # 12345678 <_test_end+0x12345478>
+  28:	7f137393          	andi	t2,t1,2033
+  2c:	0da37e13          	andi	t3,t1,218
+  30:	ec437e93          	andi	t4,t1,-316
+  34:	00542023          	sw	t0,0(s0)
+  38:	00742223          	sw	t2,4(s0)
+  3c:	01c42423          	sw	t3,8(s0)
+  40:	01d42623          	sw	t4,12(s0)
+  44:	20000413          	li	s0,512
