@@ -1,6 +1,6 @@
 `define CYCLE 10
 `define END 1000
-`define instr "add"
+//`define instr "add"
 `define HexPath {"./asm/",`instr,"/",`instr,".hex"} 
 `define SigPath {"./asm/",`instr,"/",`instr,".sig.dat.hex"} 
 
@@ -18,7 +18,7 @@ initial begin
     $readmemh(`HexPath,dut.IM.mem);
     $readmemh(`HexPath,dut.DM.mem);
     fd = $fopen(`SigPath,"r");
-  
+   // $display("***%s***",`instr);
     do begin
         $fscanf(fd,"%h",resultMem[resultLen]);
         if(!$feof(fd)) resultLen = resultLen +1;
@@ -40,7 +40,7 @@ initial begin
     #(`END) 
     for(i=0;i<resultLen;i++) begin
         if(resultMem[i] == dut.DM.mem[32'h40+i]) begin
-            //$display("correc, %h",resultMem[i]);
+            $display("correc, %h",resultMem[i]);
         end
         else begin
             $display("error , %d %h != %h (expected)",i,dut.DM.mem[32'h40+i],resultMem[i]);

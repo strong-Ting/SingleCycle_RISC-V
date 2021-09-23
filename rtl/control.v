@@ -15,12 +15,21 @@ module control(
 );
 assign instr_mem_read = 1'd1;
 
-parameter [3:0] AND = 4'b0000,
-                OR  = 4'b0001,
-                ADD = 4'b0010,
-                SUB = 4'b0110,
-                SLT = 4'b0111,
-                NOR = 4'b1100;
+parameter [3:0] AND = 4'd0,
+                OR  = 4'd1,
+                ADD = 4'd2,
+                SUB = 4'd3,
+                SLT = 4'd4,
+                XOR = 4'd5,
+                SLL = 4'd6,
+                SLTU= 4'd7,
+                SRL = 4'd8,
+                SRA = 4'd9,
+                MUL = 4'd10,
+                MULH= 4'd11,
+                MULHU=4'd12,
+                NONE = 4'd13,
+                RS1 = 4'd14;
 
 always@(*) begin
     
@@ -38,12 +47,53 @@ always@(*) begin
                     case(funct7) 
                         7'b0000000: aluSel = ADD;
                         7'b0100000: aluSel = SUB;
-                        default: aluSel = ADD;
+                        default: aluSel = NONE;
                     endcase
                 end
-                //3'b001: begin
-                //end
-                default: aluSel = 4'd0;
+                3'b001: begin
+                    case(funct7) 
+                        7'b0000000: aluSel = SLL;
+                        default: aluSel = NONE;
+                    endcase
+                end
+                3'b010: begin
+                    case(funct7) 
+                        7'b0000000: aluSel = SLT;
+                        default: aluSel = NONE;
+                    endcase
+                end
+                3'b011: begin
+                    case(funct7) 
+                        7'b0000000: aluSel = SLTU;
+                        default: aluSel = NONE;
+                    endcase
+                end
+                3'b100: begin
+                    case(funct7) 
+                        7'b0000000: aluSel = XOR;
+                        default: aluSel = NONE;
+                    endcase
+                end
+                3'b101: begin
+                    case(funct7) 
+                        7'b0000000: aluSel = SRL;
+                        7'b0100000: aluSel = SRA;
+                        default: aluSel = NONE;
+                    endcase
+                end
+                3'b110: begin
+                    case(funct7) 
+                        7'b0000000: aluSel = OR;
+                        default: aluSel = NONE;
+                    endcase
+                end
+                3'b111: begin
+                    case(funct7) 
+                        7'b0000000: aluSel = AND;
+                        default: aluSel = NONE;
+                    endcase
+                end
+                default: aluSel = NONE;
             endcase
         end
         7'b0000011: begin //I-type
@@ -59,7 +109,6 @@ always@(*) begin
                 3'b000: aluSel = ADD;
                 default: aluSel = ADD;
             endcase
-            aluSel = ADD;
             rd_write = 1'd1;
         end
         7'b1100111: begin //I-type
@@ -78,12 +127,22 @@ always@(*) begin
         end
         7'b0010111: begin //U-type
         end
+        7'b0110111: begin //U-type
+            aluSrc1Sel = 1'd1;
+            aluSrc2Sel = 2'd0;
+            data_mem_read = 1'd0;
+            data_mem_write = 4'd0;
+            wbSel = 2'd0;
+            pcSel = 3'd0;
+            aluSel = RS1;
+            rd_write = 1'd1;
+        end
         7'b1101111: begin //I-type
         end
         default: begin
             data_mem_read = 1'd0;
             data_mem_write = 4'd0;
-            aluSel = 4'd0;
+            aluSel = NONE;
             aluSrc1Sel = 1'd0;
             aluSrc2Sel = 2'd0;
             wbSel = 2'd0;

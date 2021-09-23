@@ -11,8 +11,12 @@ module CPU(
     output [31:0] data_mem_data_w 
 );
 
-wire [11:0] S_type_imm = {instr_mem_data_r[31:25],instr_mem_data_r[11:7]};
-wire [11:0] I_type_imm = instr_mem_data_r[31:20];
+
+wire [31:0] I_type_imm = {20'd0,instr_mem_data_r[31:20]};
+wire [31:0] S_type_imm = {20'd0,instr_mem_data_r[31:25],instr_mem_data_r[11:7]};
+
+wire [31:0] S_type_imm_signed_extend = {{20{instr_mem_data_r[31]}},instr_mem_data_r[31:25],instr_mem_data_r[11:7]};
+wire [31:0] I_type_imm_signed_extend = {{20{instr_mem_data_r[31]}},instr_mem_data_r[31:20]};
 wire [19:0] U_type_imm = instr_mem_data_r[31:12];
 
 //declare
@@ -88,12 +92,12 @@ regfile regfile_inst(
 );
 
 //alu
-assign alu_rs1 = (aluSrc1Sel == 1'd0) ? rs1_data : {12'd0,U_type_imm};
+assign alu_rs1 = (aluSrc1Sel == 1'd0) ? rs1_data : {U_type_imm,12'd0};
 always@(*) begin
     case (aluSrc2Sel)
         2'd0: alu_rs2 = rs2_data;
-        2'd1: alu_rs2 = {20'd0,S_type_imm};
-        2'd2: alu_rs2 = {20'd0,I_type_imm};
+        2'd1: alu_rs2 = S_type_imm_signed_extend;
+        2'd2: alu_rs2 = I_type_imm_signed_extend;
         2'd3: alu_rs2 = pc;
     endcase
 end
