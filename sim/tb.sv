@@ -66,7 +66,7 @@ initial begin
     clk = 1'd1;
     rst = 1'd0;
     #(`CYCLE) rst = 1'd1;
-    #(`CYCLE) rst = 1'd0;
+    #(`CYCLE+1) rst = 1'd0;
     #(`CYCLE);
 end
 
