@@ -16,26 +16,25 @@ initial begin
     data_b = 32'd0;
     address_a = 32'd0;
     address_b = 32'd1;
+    #50
     #100 $display("data_a: %h",q_a);
         // $display("data_b: %h",q_b);
-    address_a = 32'd2;
+    address_a = 32'd1;
     address_b = 32'd3;
     #100 $display("data_a: %h",q_a);
         // $display("data_b: %h",q_b);
-    address_a = 32'd4;
+    address_a = 32'd2;
     address_b = 32'd5;
     #100 $display("data_a: %h",q_a);
         // $display("data_b: %h",q_b);
     #100 $finish;
 end
 
-always #10 clk = ~clk;
+always #50 clk = ~clk;
 
-RAM_1PORT	RAM_1PORT_inst (
+rom	rom_inst (
 	.address ( address_a ),
 	.clock ( clk ),
-	.data ( data_a ),
-	.wren ( 1'b0 ),
 	.q ( q_a )
 	);
 

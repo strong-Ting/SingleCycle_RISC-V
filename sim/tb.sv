@@ -1,3 +1,4 @@
+`timescale 1ps/1ps
 `define CYCLE 10
 `define END 1000
 //`define instr "add"

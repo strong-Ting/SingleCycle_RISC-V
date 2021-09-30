@@ -1,4 +1,4 @@
-Info Session started: Tue Aug 31 22:36:20 2021
+Info Session started: Fri Sep 24 16:41:57 2021
 
 Info ------------- ENVIRONMENT -------------
 Info LD_LIBRARY_PATH                          = /usr/cad/synopsys/verdi/cur//share/PLI/IUS/LINUX64
@@ -24,7 +24,7 @@ Copyright (c) 2005-2021 Imperas Software Ltd.  Contains Imperas Proprietary Info
 Licensed Software, All Rights Reserved.
 Visit www.IMPERAS.com for multicore debug, verification and analysis solutions.
 
-riscvOVPsim started: Tue Aug 31 22:36:20 2021
+riscvOVPsim started: Fri Sep 24 16:41:57 2021
 
 
 Info (OR_OF) Target 'riscvOVPsim/cpu' has object file read from 'lh/lh'
@@ -50,11 +50,11 @@ Info ---------------------------------------------------
 Info SIMULATION TIME STATISTICS
 Info   Simulated time        : 0.00 seconds
 Info   User time             : 0.00 seconds
-Info   System time           : 0.00 seconds
+Info   System time           : 0.01 seconds
 Info   Elapsed time          : 0.00 seconds
 Info ---------------------------------------------------
 
-riscvOVPsim finished: Tue Aug 31 22:36:20 2021
+riscvOVPsim finished: Fri Sep 24 16:41:57 2021
 
 
 riscvOVPsim (64-Bit) v20210709.0 Open Virtual Platform simulator from www.IMPERAS.com.
@@ -65,5 +65,5 @@ ffff8fff
 00007fff
 00000000
 00000000
-Info Session ended: Tue Aug 31 22:36:20 2021
+Info Session ended: Fri Sep 24 16:41:57 2021
 

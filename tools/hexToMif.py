@@ -26,7 +26,7 @@ f = open(args.inputHex.rstrip('.hex')+'.mif','w')
 f.write(f"WIDTH={width};\n")
 f.write(f"DEPTH={length};\n")
 f.write(f"\n")
-f.write(f"ADDRESS_RADIX=HEX\n")
+f.write(f"ADDRESS_RADIX=HEX;\n")
 f.write(f"DATA_RADIX=HEX;\n")
 f.write(f"CONTENT BEGIN\n")
 

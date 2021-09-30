@@ -1,0 +1,59 @@
+
+srai/srai:     file format elf32-littleriscv
+srai/srai
+architecture: riscv:rv32, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000000
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x00000044 memsz 0x00000044 flags r-x
+    LOAD off    0x00001100 vaddr 0x00000100 paddr 0x00000100 align 2**12
+         filesz 0x00000000 memsz 0x00000100 flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000044  00000000  00000000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 _test         00000100  00000100  00000100  00001100  2**0
+                  ALLOC
+  2 .riscv.attributes 0000001f  00000000  00000000  00001044  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000100 l    d  _test	00000000 _test
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000100 g       _test	00000000 _test_start
+00000200 g       _test	00000000 _test_end
+
+
+Contents of section .text:
+ 0000 13040010 b7c2b2a1 9382423d 93d25240  ..........B=..R@
+ 0010 93d22240 93d28240 93d29240 93d24240  .."@...@...@..B@
+ 0020 3783bfaa 1303c390 9353d340 135e8340  7........S.@.^.@
+ 0030 23205400 23226400 23247400 2326c401  # T.#"d.#$t.#&..
+ 0040 13040020                             ...             
+Contents of section .riscv.attributes:
+ 0000 411e0000 00726973 63760001 14000000  A....riscv......
+ 0010 05727633 32693270 305f6d32 703000    .rv32i2p0_m2p0. 
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	10000413          	li	s0,256
+   4:	a1b2c2b7          	lui	t0,0xa1b2c
+   8:	3d428293          	addi	t0,t0,980 # a1b2c3d4 <_test_end+0xa1b2c1d4>
+   c:	4052d293          	srai	t0,t0,0x5
+  10:	4022d293          	srai	t0,t0,0x2
+  14:	4082d293          	srai	t0,t0,0x8
+  18:	4092d293          	srai	t0,t0,0x9
+  1c:	4042d293          	srai	t0,t0,0x4
+  20:	aabf8337          	lui	t1,0xaabf8
+  24:	90c30313          	addi	t1,t1,-1780 # aabf790c <_test_end+0xaabf770c>
+  28:	40d35393          	srai	t2,t1,0xd
+  2c:	40835e13          	srai	t3,t1,0x8
+  30:	00542023          	sw	t0,0(s0)
+  34:	00642223          	sw	t1,4(s0)
+  38:	00742423          	sw	t2,8(s0)
+  3c:	01c42623          	sw	t3,12(s0)
+  40:	20000413          	li	s0,512

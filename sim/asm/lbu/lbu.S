@@ -1,11 +1,11 @@
 la s0, _test_start
 ########################
-li t0,0x0000008f
+li t0,0xff00008f
 sw t0,0(s0)
 lbu t0,0(s0)
 sw t0, 0(s0)
 
-li t0,0x0000007f
+li t0,0xff00007f
 sw t0,4(s0)
 lbu t0,4(s0)
 sw t0,4(s0)

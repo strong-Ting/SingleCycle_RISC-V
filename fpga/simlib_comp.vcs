@@ -3,7 +3,6 @@
 -v /home/DICS/M10912039/intelFPGA_lite/20.1/quartus/eda/sim_lib/220model.v 
 -v /home/DICS/M10912039/intelFPGA_lite/20.1/quartus/eda/sim_lib/sgate.v 
 -v /home/DICS/M10912039/intelFPGA_lite/20.1/quartus/eda/sim_lib/altera_mf.v 
--lca 
- /home/DICS/M10912039/intelFPGA_lite/20.1/quartus/eda/sim_lib/altera_lnsim.sv  
+-lca /home/DICS/M10912039/intelFPGA_lite/20.1/quartus/eda/sim_lib/altera_lnsim.sv  
 -v /home/DICS/M10912039/intelFPGA_lite/20.1/quartus/eda/sim_lib/cycloneive_atoms.v 
  +incdir+/home/DICS/M10912039/intelFPGA_lite/20.1/quartus/eda/sim_lib 

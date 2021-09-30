@@ -1,0 +1,751 @@
+==========	uname -a	==========
+Linux icsdws20.ee.yuntech.edu.tw 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+-------------	end(uname -a)     -------------
+
+==========	limit		==========
+cputime      unlimited
+filesize     unlimited
+datasize     unlimited
+stacksize    8192 kbytes
+coredumpsize 0 kbytes
+memoryuse    unlimited
+vmemoryuse   unlimited
+descriptors  4096 
+memorylocked 64 kbytes
+maxproc      4096 
+maxlocks     unlimited
+maxsignal    254911 
+maxmessage   819200 
+maxnice      0 
+maxrtprio    0 
+maxrttime    unlimited
+-------------	end(limit)     -------------
+==========	xdpyinfo	==========
+name of display:    140.125.44.75:0.0
+version number:    11.0
+vendor string:    Colin Harrison
+vendor release number:    70700021
+maximum request size:  16777212 bytes
+motion buffer size:  256
+bitmap unit, bit order, padding:    32, LSBFirst, 32
+image byte order:    LSBFirst
+number of supported pixmap formats:    7
+supported pixmap formats:
+    depth 1, bits_per_pixel 1, scanline_pad 32
+    depth 4, bits_per_pixel 8, scanline_pad 32
+    depth 8, bits_per_pixel 8, scanline_pad 32
+    depth 15, bits_per_pixel 16, scanline_pad 32
+    depth 16, bits_per_pixel 16, scanline_pad 32
+    depth 24, bits_per_pixel 32, scanline_pad 32
+    depth 32, bits_per_pixel 32, scanline_pad 32
+keycode range:    minimum 8, maximum 255
+focus:  window 0xa0030c, revert to Parent
+number of extensions:    21
+    BIG-REQUESTS
+    Composite
+    DAMAGE
+    DOUBLE-BUFFER
+    GLX
+    Generic Event Extension
+    MIT-SCREEN-SAVER
+    Present
+    RANDR
+    RECORD
+    RENDER
+    SECURITY
+    SHAPE
+    SYNC
+    X-Resource
+    XC-MISC
+    XFIXES
+    XINERAMA
+    XInputExtension
+    XKEYBOARD
+    XTEST
+default screen number:    0
+number of screens:    1
+
+screen #0:
+  dimensions:    1920x1080 pixels (650x365 millimeters)
+  resolution:    75x75 dots per inch
+  depths (7):    24, 1, 4, 8, 15, 16, 32
+  root window id:    0xe3
+  depth of root window:    24 planes
+  number of colormaps:    minimum 1, maximum 1
+  default colormap:    0x20
+  default number of colormap cells:    256
+  preallocated pixels:    black 0, white 16777215
+  options:    backing-store WHEN MAPPED, save-unders NO
+  largest cursor:    32x32
+  current input event mask:    0x484034
+    ButtonPressMask          EnterWindowMask          LeaveWindowMask          
+    KeymapStateMask          SubstructureNotifyMask   PropertyChangeMask       
+  number of visuals:    64
+  default visual id:  0x21
+  visual:
+    visual id:    0x21
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xa4
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xa5
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xa6
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xa7
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xa8
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xa9
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xaa
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xab
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xac
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xad
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xae
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xaf
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb0
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb1
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb2
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb3
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb4
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb5
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb6
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb7
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb8
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xb9
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xba
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xbb
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xbc
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xbd
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xbe
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xbf
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc0
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc1
+    class:    TrueColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc2
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc3
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc4
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc5
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc6
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc7
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc8
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xc9
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xca
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xcb
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xcc
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xcd
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xce
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xcf
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd0
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd1
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd2
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd3
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd4
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd5
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd6
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd7
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd8
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xd9
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xda
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xdb
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xdc
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xdd
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xde
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xdf
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xe0
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0xe1
+    class:    DirectColor
+    depth:    24 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+  visual:
+    visual id:    0x43
+    class:    TrueColor
+    depth:    32 planes
+    available colormap entries:    256 per subfield
+    red, green, blue masks:    0xff0000, 0xff00, 0xff
+    significant bits in color specification:    8 bits
+-------------	end(xdpyinfo)     -------------
+==========	Environment Variables	==========
+MANPATH=/usr/cad/synopsys/synthesis/cur/doc/syn/man
+NOVAS_USE_VERDI_LICENSE=1
+XDG_SESSION_ID=4622
+TERM_PROGRAM=vscode
+HOSTNAME=icsdws20.ee.yuntech.edu.tw
+XLOCALEDIR=/usr/cad/synopsys/icc2/cur/etc/locale
+XKEYSYMDB=/usr/cad/synopsys/verdi/cur/etc/access/XKeysymDB2.1
+SIGNAL_BASE_EXTRACTION=1
+NOVAS_SYNC_MOTIF_DISP=
+TERM=xterm-256color
+SHELL=/bin/bash
+HOST=icsdws20.ee.yuntech.edu.tw
+HISTSIZE=1000
+SSH_CLIENT=140.125.44.75 53576 22
+NOVAS_VERDI_SVTB_ALPHA=1
+TERM_PROGRAM_VERSION=1.59.1
+SPS_FONT_PATH=/usr/cad/synopsys/verdi/cur/font
+QTDIR=/usr/lib64/qt-3.3
+QSYS_ROOTDIR=/home/DICS/M10912039/intelFPGA_lite/20.1/quartus/sopc_builder/bin
+MGC_LOCATION_MAP=NO_MAP
+SPS_XFONT_PATH=/usr/cad/synopsys/verdi/cur/XFont
+QTINC=/usr/lib64/qt-3.3/include
+SG_HTML_BROWSER=/usr/bin/mozilla
+LC_ALL=C
+QT_GRAPHICSSYSTEM_CHECKED=1
+USER=M10912039
+GROUP=M10912039
+PS_HWPC=OFF
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin:/usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt:/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUXAMD64:/usr/cad/synopsys/verdi/cur/share/NPI/lib/LINUXAMD64:/usr/cad/synopsys/verdi/cur//share/PLI/IUS/LINUX64
+XNLSPATH=/usr/cad/synopsys/verdi/cur/etc/access/nls
+TCL_LIBRARY=/usr/cad/synopsys/verdi/cur/etc/access/tcl86_library
+HOSTTYPE=x86_64-linux
+NOVAS_TCL_LIBRARY=/usr/cad/synopsys/verdi/cur/etc/access/tcl86_library
+NOVAS_VERDI_SVTB_BETA=1
+PATH=/bin:/usr/cad/mentor/Questa_Sim/cur/questasim/bin:/usr/cad/mentor/modelsim/cur/bin:/usr/cad/mentor/calibre/cur/bin:/usr/cad/cadence/INNOVUS/INNOVUS_20.10.000/tools/bin/64bit:/usr/cad/cadence/INNOVUS/INNOVUS_20.10.000/tools/bin:/usr/cad/synopsys/synplify/cur/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/amd64/syn/bin:/usr/cad/synopsys/icc2/cur/bin:/usr/cad/synopsys/icc/cur/amd64/syn/bin:/usr/cad/synopsys/spyglass/cur/SPYGLASS_HOME/bin:/usr/cad/synopsys/vcs/cur/bin:/usr/cad/synopsys/vcs/cur/linux/bin:/usr/cad/synopsys/vcs/cur/linux/util:/usr/cad/synopsys/vcs/cur/linux/flexlm:/usr/cad/synopsys/verdi/cur/bin:/usr/cad/synopsys/verdi/cur/nLint/bin:/usr/bin/X11:/usr/cad/synopsys/coreConsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/bin/64bit:/usr/cad/cadence/INCISIV/INCISIVE_15.20.039/tools/bin:/home/DICS/M10912039/.vscode-server/bin/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa/bin:/home/DICS/M10912039/.vscode-server/bin/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/home/DICS/M10912039/risc_de2115/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/:/usr/local/sbin:/usr/sbin:/home/DICS/M10912039/risc_de2115/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/:/home/DICS/M10912039/.local/bin:/home/DICS/M10912039/bin:/home/DICS/M10912039/risc_de2115/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/
+MAIL=/var/spool/mail/M10912039
+QUARTUS_ROOTDIR=/home/DICS/M10912039/intelFPGA_lite/20.1/quartus
+VERDI_HOME=/usr/cad/synopsys/verdi/cur/
+PWD=/home/DICS/M10912039/RISC-V/SingleCycle_RISC-V/fpga
+SYNOPSYS_synplify=/usr/cad/synopsys/synplify/cur
+VCS_HOME=/usr/cad/synopsys/vcs/cur/
+XMODIFIERS=@im=none
+EDITOR=/usr/bin/vim
+LANG=C
+SYS_PROG_NAME=nWave
+VERDI_TB_HT=1
+SYNTHESIS=/usr/cad/synopsys/synthesis/cur
+OA_HOME=/usr/cad/cadence/INNOVUS/INNOVUS_20.10.000/oa_v22.60.028
+VCS_CC=gcc
+USE_VERDI_LICENSE=1
+LM_LICENSE_FILE=1717@140.116.49.24:5280@140.110.117.10:26585@140.116.49.24:
+SYNOPSYS=/usr/cad/synopsys/icc/cur
+PRIMETIME=/usr/cad/synopsys/primetime/cur
+SYS_INST_DIR=/usr/cad/synopsys/verdi/cur
+HISTCONTROL=ignoredups
+HOME=/home/DICS/M10912039
+SHLVL=8
+VSCODE_GIT_ASKPASS_MAIN=/home/DICS/M10912039/.vscode-server/bin/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa/extensions/git/dist/askpass-main.js
+OSTYPE=linux
+MGC_HOME=/usr/cad/mentor/modelsim/cur
+VERDI_ORIGNAL_LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/cur//share/PLI/IUS/LINUX64
+VERDI_SVTB_ALPHA=1
+VENDOR=unknown
+MGC_TMPDIR=/tmp
+LOGNAME=M10912039
+MACHTYPE=x86_64
+QTLIB=/usr/lib64/qt-3.3/lib
+VERDI_SVTB_BETA=1
+VSCODE_GIT_IPC_HANDLE=/run/user/1002/vscode-git-60dffebdd1.sock
+SSH_CONNECTION=140.125.44.75 53576 140.125.44.60 22
+XDG_DATA_DIRS=/home/DICS/M10912039/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VSCODE_IPC_HOOK_CLI=/run/user/1002/vscode-ipc-09d9a880-82bc-4f8b-8acc-c6d3643ad570.sock
+SPS_RGB_PATH=/usr/cad/synopsys/verdi/cur/etc/rgb
+NOVASHLPPATH=/usr/cad/synopsys/verdi/cur/doc
+NOVAS_LC_ALL=C
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+BROWSER=/home/DICS/M10912039/.vscode-server/bin/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa/bin/helpers/browser.sh
+SHLIB_PATH=/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUX64/
+VSCODE_GIT_ASKPASS_NODE=/home/DICS/M10912039/.vscode-server/bin/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa/node
+GIT_ASKPASS=/home/DICS/M10912039/.vscode-server/bin/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa/extensions/git/dist/askpass.sh
+XDG_RUNTIME_DIR=/run/user/1002
+DISPLAY=140.125.44.75:0.0
+LD_NOVERSION=1
+SYN_MAN_DIR=/usr/cad/synopsys/synthesis/cur/doc/syn/man
+QT_PLUGIN_PATH=/usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/plugins
+NOVAS_SIGNAL_BASE_EXTRACTION=1
+NOVAS_VERDI_TB_HT=1
+COLORTERM=truecolor
+_=/usr/cad/synopsys/verdi/cur/etc/access/sysinfo.sh
+-------------	end(env)     -------------
+==========	ps	    ==========
+  PID TTY          TIME CMD
+35257 pts/2    00:00:00 sysinfo.sh
+35272 pts/2    00:00:00 ps
+45519 pts/2    00:00:00 bash
+45613 pts/2    00:00:00 csh
+50378 pts/2    00:05:06 Novas
+55560 pts/2    00:00:00 sh
+55561 pts/2    00:03:01 quartus
+-------------	end(ps)     -------------
+==========       cat /proc/meminfo        ==========
+MemTotal:       65479816 kB
+MemFree:        54646980 kB
+MemAvailable:   60006036 kB
+Buffers:            1448 kB
+Cached:          5590692 kB
+SwapCached:            0 kB
+Active:          5908492 kB
+Inactive:        2432408 kB
+Active(anon):    2865704 kB
+Inactive(anon):    92096 kB
+Active(file):    3042788 kB
+Inactive(file):  2340312 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:      32834556 kB
+SwapFree:       32834556 kB
+Dirty:               104 kB
+Writeback:             0 kB
+AnonPages:       2748588 kB
+Mapped:           421304 kB
+Shmem:            208816 kB
+Slab:             736576 kB
+SReclaimable:     513932 kB
+SUnreclaim:       222644 kB
+KernelStack:       12736 kB
+PageTables:        36092 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    65574464 kB
+Committed_AS:    4131620 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      510420 kB
+VmallocChunk:   34358913020 kB
+Percpu:            30240 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1634304 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      551528 kB
+DirectMap2M:    40019968 kB
+DirectMap1G:    26214400 kB
+-------------	     end(cat /proc/meminfo)      -------------
+==========       show OS patch level     ==========
+\S
+Kernel \r on an \m
+
+-------------    end(show OS patch level)      -------------
+=========       uptime      ==========
+ 22:10:02 up 27 days,  9:53,  0 users,  load average: 0.32, 0.30, 0.18
+------------    end(uptime)    -------------
+=========       locale       ==========
+LANG=C
+LC_CTYPE="C"
+LC_NUMERIC="C"
+LC_TIME="C"
+LC_COLLATE="C"
+LC_MONETARY="C"
+LC_MESSAGES="C"
+LC_PAPER="C"
+LC_NAME="C"
+LC_ADDRESS="C"
+LC_TELEPHONE="C"
+LC_MEASUREMENT="C"
+LC_IDENTIFICATION="C"
+LC_ALL=C
+------------    end(locale)    -------------
+==========       ldd       ==========
+ldd /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas
+	linux-vdso.so.1 =>  (0x00007fff589fb000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007f04f2b43000)
+	libvfs.so => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/libvfs.so (0x00007f04f2836000)
+	libfreetype.so.6 => /lib64/libfreetype.so.6 (0x00007f04f2577000)
+	libQtSolutions_MotifExtension-2.7.so.1 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtSolutions_MotifExtension-2.7.so.1 (0x00007f04f2361000)
+	libQtGui.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtGui.so.4 (0x00007f04f17bd000)
+	libQtCore.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtCore.so.4 (0x00007f04f1324000)
+	libQtXml.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtXml.so.4 (0x00007f04f10ea000)
+	libQtWebKit.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtWebKit.so.4 (0x00007f04ef7d9000)
+	libQtNetwork.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtNetwork.so.4 (0x00007f04ef4cb000)
+	libQt3Support.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQt3Support.so.4 (0x00007f04ef02b000)
+	libQtSql.so.4 => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/lib/Qt/libQtSql.so.4 (0x00007f04eedf5000)
+	libsimprofile.so => /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/libsimprofile.so (0x00007f04eea3d000)
+	libXss.so.1 => /lib64/libXss.so.1 (0x00007f04ee839000)
+	libXft.so.2 => /lib64/libXft.so.2 (0x00007f04ee623000)
+	libXt.so.6 => /lib64/libXt.so.6 (0x00007f04ee3bc000)
+	libXmu.so.6 => /lib64/libXmu.so.6 (0x00007f04ee1a1000)
+	libX11.so.6 => /lib64/libX11.so.6 (0x00007f04ede63000)
+	libXext.so.6 => /lib64/libXext.so.6 (0x00007f04edc51000)
+	libfontconfig.so.1 => /lib64/libfontconfig.so.1 (0x00007f04eda0f000)
+	libnsl.so.1 => /lib64/libnsl.so.1 (0x00007f04ed7f5000)
+	libnuma.so.1 => /lib64/libnuma.so.1 (0x00007f04ed5e9000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f04ed3cd000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007f04ed1c5000)
+	libpng12.so.0 => /lib64/libpng12.so.0 (0x00007f04ecf9e000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007f04ecc9c000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f04ec8ce000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f04f2d47000)
+	libz.so.1 => /lib64/libz.so.1 (0x00007f04ec6b8000)
+	libbz2.so.1 => /lib64/libbz2.so.1 (0x00007f04ec4a8000)
+	libpng15.so.15 => /lib64/libpng15.so.15 (0x00007f04ec27d000)
+	libSM.so.6 => /lib64/libSM.so.6 (0x00007f04ec075000)
+	libICE.so.6 => /lib64/libICE.so.6 (0x00007f04ebe59000)
+	libstdc++.so.6 => /usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUXAMD64/libstdc++.so.6 (0x00007f04ebad8000)
+	libgcc_s.so.1 => /usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUXAMD64/libgcc_s.so.1 (0x00007f04eb8c2000)
+	libXrender.so.1 => /lib64/libXrender.so.1 (0x00007f04eb6b7000)
+	libxcb.so.1 => /lib64/libxcb.so.1 (0x00007f04eb48f000)
+	libexpat.so.1 => /lib64/libexpat.so.1 (0x00007f04eb265000)
+	libuuid.so.1 => /lib64/libuuid.so.1 (0x00007f04eb060000)
+	libXau.so.6 => /lib64/libXau.so.6 (0x00007f04eae5c000)
+-------------    end(ldd)      -------------

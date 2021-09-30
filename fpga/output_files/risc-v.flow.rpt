@@ -1,0 +1,139 @@
+Flow report for risc-v
+Fri Sep 24 16:19:52 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Fri Sep 24 16:19:52 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; risc-v                                      ;
+; Top-level Entity Name              ; rom                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE115F29C7                               ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 572 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 535 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 164 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 164                                         ;
+; Total pins                         ; 49 / 529 ( 9 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 2,097,152 / 3,981,312 ( 53 % )              ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 09/24/2021 16:19:11 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; risc-v              ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                               ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 194042949135237.163247155160513        ; --            ; --          ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; VCS                                    ; <None>        ; --          ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
+; MISC_FILE                           ; rom_inst.v                             ; --            ; --          ; --                                ;
+; MISC_FILE                           ; rom_bb.v                               ; --            ; --          ; --                                ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; rom         ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; rom         ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; rom         ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; rom                                    ; risc-v        ; --          ; --                                ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 596 MB              ; 00:00:29                           ;
+; Fitter               ; 00:00:14     ; 1.1                     ; 1433 MB             ; 00:00:23                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 498 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.5                     ; 719 MB              ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 754 MB              ; 00:00:01                           ;
+; Total                ; 00:00:35     ; --                      ; --                  ; 00:00:59                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                  ;
++----------------------+----------------------------+--------------+--------------+----------------+
+; Module Name          ; Machine Hostname           ; OS Name      ; OS Version   ; Processor type ;
++----------------------+----------------------------+--------------+--------------+----------------+
+; Analysis & Synthesis ; icsdws20.ee.yuntech.edu.tw ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Fitter               ; icsdws20.ee.yuntech.edu.tw ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Assembler            ; icsdws20.ee.yuntech.edu.tw ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Timing Analyzer      ; icsdws20.ee.yuntech.edu.tw ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; EDA Netlist Writer   ; icsdws20.ee.yuntech.edu.tw ; CentOS Linux ; CentOS Linux ; x86_64         ;
++----------------------+----------------------------+--------------+--------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off risc-v -c risc-v
+quartus_fit --read_settings_files=off --write_settings_files=off risc-v -c risc-v
+quartus_asm --read_settings_files=off --write_settings_files=off risc-v -c risc-v
+quartus_sta risc-v -c risc-v
+quartus_eda --read_settings_files=off --write_settings_files=off risc-v -c risc-v
+
+
+

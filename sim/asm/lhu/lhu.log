@@ -28,8 +28,8 @@ SYMBOL TABLE:
 
 
 Contents of section .text:
- 0000 13040010 b7920000 9382f2ff 23205400  ............# T.
- 0010 83520400 23205400 b7820000 9382f2ff  .R..# T.........
+ 0000 13040010 b79200f0 9382f2ff 23205400  ............# T.
+ 0010 83520400 23205400 b78200f0 9382f2ff  .R..# T.........
  0020 23225400 83524400 23225400 23240400  #"T..RD.#"T.#$..
  0030 23260400 13040020                    #&.....         
 Contents of section .riscv.attributes:
@@ -40,13 +40,13 @@ Disassembly of section .text:
 
 00000000 <.text>:
    0:	10000413          	li	s0,256
-   4:	000092b7          	lui	t0,0x9
-   8:	fff28293          	addi	t0,t0,-1 # 8fff <_test_end+0x8dff>
+   4:	f00092b7          	lui	t0,0xf0009
+   8:	fff28293          	addi	t0,t0,-1 # f0008fff <_test_end+0xf0008dff>
    c:	00542023          	sw	t0,0(s0)
   10:	00045283          	lhu	t0,0(s0)
   14:	00542023          	sw	t0,0(s0)
-  18:	000082b7          	lui	t0,0x8
-  1c:	fff28293          	addi	t0,t0,-1 # 7fff <_test_end+0x7dff>
+  18:	f00082b7          	lui	t0,0xf0008
+  1c:	fff28293          	addi	t0,t0,-1 # f0007fff <_test_end+0xf0007dff>
   20:	00542223          	sw	t0,4(s0)
   24:	00445283          	lhu	t0,4(s0)
   28:	00542223          	sw	t0,4(s0)

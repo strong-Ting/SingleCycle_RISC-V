@@ -7,17 +7,17 @@ start address 0x00000000
 
 Program Header:
     LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
-         filesz 0x00000030 memsz 0x00000030 flags r-x
+         filesz 0x00000038 memsz 0x00000038 flags r-x
     LOAD off    0x00001100 vaddr 0x00000100 paddr 0x00000100 align 2**12
          filesz 0x00000000 memsz 0x00000100 flags rw-
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000030  00000000  00000000  00001000  2**2
+  0 .text         00000038  00000000  00000000  00001000  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 _test         00000100  00000100  00000100  00001100  2**0
                   ALLOC
-  2 .riscv.attributes 0000001f  00000000  00000000  00001030  2**0
+  2 .riscv.attributes 0000001f  00000000  00000000  00001038  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00000000 l    d  .text	00000000 .text
@@ -28,9 +28,10 @@ SYMBOL TABLE:
 
 
 Contents of section .text:
- 0000 13040010 9302f008 23205400 83420400  ........# T..B..
- 0010 23205400 9302f007 23225400 83424400  # T.....#"T..BD.
- 0020 23225400 23240400 23260400 13040020  #"T.#$..#&..... 
+ 0000 13040010 b70200ff 9382f208 23205400  ............# T.
+ 0010 83420400 23205400 b70200ff 9382f207  .B..# T.........
+ 0020 23225400 83424400 23225400 23240400  #"T..BD.#"T.#$..
+ 0030 23260400 13040020                    #&.....         
 Contents of section .riscv.attributes:
  0000 411e0000 00726973 63760001 14000000  A....riscv......
  0010 05727633 32693270 305f6d32 703000    .rv32i2p0_m2p0. 
@@ -39,14 +40,16 @@ Disassembly of section .text:
 
 00000000 <.text>:
    0:	10000413          	li	s0,256
-   4:	08f00293          	li	t0,143
-   8:	00542023          	sw	t0,0(s0)
-   c:	00044283          	lbu	t0,0(s0)
-  10:	00542023          	sw	t0,0(s0)
-  14:	07f00293          	li	t0,127
-  18:	00542223          	sw	t0,4(s0)
-  1c:	00444283          	lbu	t0,4(s0)
+   4:	ff0002b7          	lui	t0,0xff000
+   8:	08f28293          	addi	t0,t0,143 # ff00008f <_test_end+0xfefffe8f>
+   c:	00542023          	sw	t0,0(s0)
+  10:	00044283          	lbu	t0,0(s0)
+  14:	00542023          	sw	t0,0(s0)
+  18:	ff0002b7          	lui	t0,0xff000
+  1c:	07f28293          	addi	t0,t0,127 # ff00007f <_test_end+0xfefffe7f>
   20:	00542223          	sw	t0,4(s0)
-  24:	00042423          	sw	zero,8(s0)
-  28:	00042623          	sw	zero,12(s0)
-  2c:	20000413          	li	s0,512
+  24:	00444283          	lbu	t0,4(s0)
+  28:	00542223          	sw	t0,4(s0)
+  2c:	00042423          	sw	zero,8(s0)
+  30:	00042623          	sw	zero,12(s0)
+  34:	20000413          	li	s0,512

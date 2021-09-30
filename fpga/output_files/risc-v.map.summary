@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Sep 24 16:19:24 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : risc-v
+Top-level Entity Name : rom
+Family : Cyclone IV E
+Total logic elements : 572
+    Total combinational functions : 535
+    Dedicated logic registers : 164
+Total registers : 164
+Total pins : 49
+Total virtual pins : 0
+Total memory bits : 2,097,152
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

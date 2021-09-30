@@ -1,3 +1,8 @@
 Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas -nWave
 uname(Linux icsdws20.ee.yuntech.edu.tw 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64)
-au time 10583.151090 102.037129 82.163361 delta 1904484352 1904484352 total 2328031232 2328031232
+Failed to delete /home/DICS/M10912039/RISC-V/SingleCycle_RISC-V/fpga/BSSLib.lib++
+- System Information -
+Version: Verdi_O-2018.09, -- Thu Aug 30 04:32:59 PDT 2018
+System: Linux icsdws20.ee.yuntech.edu.tw 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64
+Total memory used: 1575178240
+Run time: Fri Sep 24 22:10:02 2021

@@ -17,20 +17,21 @@ wire [31:0] S_type_imm = {20'd0,instr_mem_data_r[31:25],instr_mem_data_r[11:7]};
 
 wire [31:0] S_type_imm_signed_extend = {{20{instr_mem_data_r[31]}},instr_mem_data_r[31:25],instr_mem_data_r[11:7]};
 wire [31:0] I_type_imm_signed_extend = {{20{instr_mem_data_r[31]}},instr_mem_data_r[31:20]};
-wire [19:0] U_type_imm = instr_mem_data_r[31:12];
-
+wire [19:0] U_type_imm = {instr_mem_data_r[31:12]};
+wire [31:0] B_type_imm = {{19{instr_mem_data_r[31]}},instr_mem_data_r[31],instr_mem_data_r[7],instr_mem_data_r[30:25],instr_mem_data_r[11:8],1'b0};
+wire [31:0] J_type_imm = {{11{instr_mem_data_r[31]}}, instr_mem_data_r[31], instr_mem_data_r[19:12], instr_mem_data_r[20], instr_mem_data_r[30:21], 1'b0};
 //declare
 
 //control
 wire [3:0] aluSel;
 wire aluSrc1Sel;
-wire [1:0] aluSrc2Sel;
-wire [1:0] wbSel;
+wire [2:0] aluSrc2Sel;
+wire [2:0] wbSel;
 wire [2:0] pcSel;
 wire rd_write;
 //pc
 wire [31:0] pc;
-wire [31:0] next_pc;
+reg [31:0] next_pc;
 wire [31:0] pc_add_4 = instr_mem_addr + 32'd4;
 //regfile
 wire [31:0] rs1_data,
@@ -40,6 +41,9 @@ reg [31:0] rd_data;
 wire [31:0] alu_out;
 wire [31:0] alu_rs1;
 reg [31:0] alu_rs2;
+//branch
+wire branch;
+
 
 //control
 control control_inst(
@@ -60,7 +64,18 @@ control control_inst(
 //PC
 assign instr_mem_addr = pc;
 //PC mux
-assign next_pc = pc_add_4;
+always@(*) begin
+    case(pcSel)
+        3'd0: next_pc = pc_add_4;
+        3'd1: next_pc = alu_out;
+        3'd2: begin
+            if(branch) next_pc = alu_out;
+            else next_pc = pc_add_4;
+        end
+        default: next_pc = pc_add_4;
+    endcase
+end
+
 PC PC_inst(
     .clk (clk),
     .rst (rst),
@@ -68,14 +83,27 @@ PC PC_inst(
     .pc(pc)
 );
 
+branchCtrl branch_inst(
+    .opcode(instr_mem_data_r[6:0]),
+    .funct3(instr_mem_data_r[14:12]),
+    .rs1_data(rs1_data),
+    .rs2_data(rs2_data),
+    .branch(branch)
+);
+
 
 
 //regfile
 always@(*) begin
     case(wbSel)
-    2'd0: rd_data = alu_out;
-    2'd1: rd_data = data_mem_data_r;
-    2'd2: rd_data = pc_add_4; 
+        3'd0: rd_data = alu_out;
+        3'd1: rd_data = data_mem_data_r;
+        3'd2: rd_data = next_pc + 32'd4; 
+        3'd3: rd_data = {{24{data_mem_data_r[7]}},data_mem_data_r[7:0]};
+        3'd4: rd_data = {{16{data_mem_data_r[15]}},data_mem_data_r[15:0]};
+        3'd5: rd_data = {24'd0,data_mem_data_r[7:0]};
+        3'd6: rd_data = {16'd0,data_mem_data_r[15:0]};
+        default: rd_data = 32'd0;
     endcase
 end
 
@@ -92,13 +120,17 @@ regfile regfile_inst(
 );
 
 //alu
-assign alu_rs1 = (aluSrc1Sel == 1'd0) ? rs1_data : {U_type_imm,12'd0};
+assign alu_rs1 = (aluSrc1Sel == 1'd0) ? rs1_data : pc;
 always@(*) begin
     case (aluSrc2Sel)
-        2'd0: alu_rs2 = rs2_data;
-        2'd1: alu_rs2 = S_type_imm_signed_extend;
-        2'd2: alu_rs2 = I_type_imm_signed_extend;
-        2'd3: alu_rs2 = pc;
+        3'd0: alu_rs2 = rs2_data;
+        3'd1: alu_rs2 = S_type_imm_signed_extend;
+        3'd2: alu_rs2 = I_type_imm_signed_extend;
+        3'd3: alu_rs2 = {U_type_imm,12'd0};
+        3'd4: alu_rs2 = I_type_imm;
+        3'd5: alu_rs2 = B_type_imm;
+        3'd6: alu_rs2 = J_type_imm;
+        default: alu_rs2 = 32'd0;
     endcase
 end
 

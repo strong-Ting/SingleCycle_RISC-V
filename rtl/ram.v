@@ -10,10 +10,14 @@ module ram #(parameter words = 65536)
 reg [31:0] mem [0:words-1];
 wire [31:0] addrWords = {2'd0,addr[31:2]};
 
+always@(*) begin
+    DATA_OUT = mem[addrWords];
+end
+/*
 always @(posedge clk) begin
     if(read) DATA_OUT <= mem[addrWords];
 end
-
+*/
 always @(posedge clk) begin
     if(write[0]) mem[addrWords][7:0] <= DATA_IN[7:0];
     if(write[1]) mem[addrWords][15:8] <= DATA_IN[15:8];

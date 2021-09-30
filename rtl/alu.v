@@ -21,7 +21,8 @@ parameter [3:0] AND = 4'd0,
                 MULH= 4'd11,
                 MULHU=4'd12,
                 NONE = 4'd13,
-                RS1 = 4'd14;
+                RS1 = 4'd14,
+                RS2 = 4'd15;
 
 
 always@(*) begin
@@ -35,9 +36,10 @@ always@(*) begin
     SLL: alu_out = rs1_data << rs2_data[4:0];
     SLTU: alu_out = (rs1_data < rs2_data) ? 32'd1 : 32'd0;
     SRL: alu_out = rs1_data >> rs2_data[4:0];
-    SRA: alu_out = rs1_singed >> rs2_data[4:0];
+    SRA: alu_out = rs1_singed >>> rs2_data[4:0]; //Arithmetic right shift
     NONE: alu_out = 32'd0;
     RS1: alu_out = rs1_data;
+    RS2: alu_out = rs2_data;
     default: alu_out = 32'd0;
     endcase
 end

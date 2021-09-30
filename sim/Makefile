@@ -1,7 +1,7 @@
 
 instr =add
+#rtlFile = ../rtl/alu.v ../rtl/control.v ../rtl/CPU.v ../rtl/PC.v ../rtl/ram.v ../rtl/regfile.v ../rtl/top.v
 rtlFile = ../rtl/*.v
-
 build_hex:
 	$(MAKE) -C asm/ build instr=$(instr)
 
