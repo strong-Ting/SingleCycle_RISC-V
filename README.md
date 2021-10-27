@@ -17,6 +17,7 @@ To do:
     - LEC
     - nLint
     - APR
+    - DRC & LVS
   - 3 or 5 pipeline version 
   - AMBA & wishbone bus
   - extension instruction for AI accelerate(tensorflow for microcontroller lib)
