@@ -4,8 +4,8 @@ The CPU that is RISC-V instruction RV32I is implemented by single cycle.
 In this project, build test environment by asm,gnu gcc,RISC-V simulator.
 
 Done:
-  - Test environment (each instruction test asm,asm & c compiler gnu tool chain, memory module&map,EDA tool Makefile)
-  - Testbench
+  - Test environment (testbench,each instruction test asm,asm & c compiler gnu tool chain, memory module&map,EDA tool Makefile)
+  - implement single cycle version 
   
 To do:
   - UART communication
