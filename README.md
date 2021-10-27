@@ -11,7 +11,7 @@ To do:
   - UART communication
   - Benchmark
   - FPGA testing(altera de2-115,Xilinx)
-  - TSM 130nm example (will only commit tcl,script,makefile)
+  - ASIC example (will only commit tcl,script,makefile)
     - Synthesis
     - STA
     - LEC
