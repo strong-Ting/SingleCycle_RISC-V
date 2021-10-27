@@ -11,11 +11,11 @@ To do:
   - UART communication
   - Benchmark
   - FPGA testing(altera de2-115,Xilinx)
-  - ASIC example (will only commit tcl,script,makefile)
+  - ASIC (will only commit tcl,script,makefile)
+    - lint check
     - Synthesis
-    - STA
-    - LEC
-    - nLint
+    - static timing analysis (STA)
+    - logic equivalence check (LEC)
     - APR
     - DRC & LVS
   - 3 or 5 pipeline version 
