@@ -3,7 +3,9 @@ instr =add
 #rtlFile = ../rtl/alu.v ../rtl/control.v ../rtl/CPU.v ../rtl/PC.v ../rtl/ram.v ../rtl/regfile.v ../rtl/top.v
 rtlFile = ../rtl/*.v
 build_hex:
+ifdef build
 	$(MAKE) -C asm/ build instr=$(instr)
+endif
 
 irun: #./asm/$(instr)/$(instr).hex
 	make build_hex
