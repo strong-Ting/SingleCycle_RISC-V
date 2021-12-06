@@ -51,6 +51,51 @@ If you modify the assembly code and want to compile it(ensure your enviorment in
     cd ./sim
     make modelsim instr=add build=true
     
+# Assembly code for test each instruction  
+
+    ├── asm
+    │   ├── add
+    │   ├── addi
+    │   ├── and
+    │   ├── andi
+    │   ├── auipc
+    │   ├── beq
+    │   ├── bge
+    │   ├── bgeu
+    │   ├── blt
+    │   ├── bltu
+    │   ├── bne
+    │   ├── jal
+    │   ├── jalr
+    │   ├── lb
+    │   ├── lbu
+    │   ├── lh
+    │   ├── lhu
+    │   ├── lui
+    │   ├── lw
+    │   ├── Makefile
+    │   ├── mul
+    │   ├── mulh
+    │   ├── mulhu
+    │   ├── or
+    │   ├── ori
+    │   ├── sb
+    │   ├── sh
+    │   ├── sll
+    │   ├── slli
+    │   ├── slt
+    │   ├── slti
+    │   ├── sltiu
+    │   ├── sltu
+    │   ├── sra
+    │   ├── srai
+    │   ├── srl
+    │   ├── srli
+    │   ├── sub
+    │   ├── sw
+    │   ├── xor
+    │   └── xori
+    
 # reference
 
 arch: https://passlab.github.io/CSCE513/notes/lecture07_RISCV_Impl.pdf
