@@ -23,24 +23,26 @@ To do:
   - extension instruction for AI accelerate(tensorflow for microcontroller lib)
 
 # Running simulation
-ex: simulate add instruction
-    
-    cd ./sim
+Support simulator: Irun,VCS,Icarus Verilog,Modelsim
     
 Irun(ncverilog):
     
+    cd ./sim
     make irun instr=add
     
 VCS:
 
+    cd ./sim
     make vcs instr=add
     
 Icarus Verilog:
 
+    cd ./sim
     make iverilog instr=add
     
 Modelsim:
 
+    cd ./sim
     make modelsim instr=add
 
   
