@@ -21,6 +21,16 @@ To do:
   - 3 or 5 pipeline version 
   - AMBA & wishbone bus
   - extension instruction for AI accelerate(tensorflow for microcontroller lib)
+
+# Running simulation
+
+    cd ./sim
+    # ex:add instruction 
+    make irun instr=add
+    make vcs instr=add
+    make iverilog instr=add
+    make modelsim instr=add
+
   
 # reference
 
