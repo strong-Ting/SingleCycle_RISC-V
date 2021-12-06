@@ -45,7 +45,12 @@ Modelsim:
     cd ./sim
     make modelsim instr=add
 
-  
+
+If you modify the assembly code and want to compile it(ensure your enviorment install risc-gcc): 
+
+    cd ./sim
+    make modelsim instr=add build=True
+    
 # reference
 
 arch: https://passlab.github.io/CSCE513/notes/lecture07_RISCV_Impl.pdf
