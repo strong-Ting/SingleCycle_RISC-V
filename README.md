@@ -53,6 +53,8 @@ If you modify the assembly code and want to compile it(ensure your enviorment in
     
 # Assembly code for test each instruction  
 
+    cd ./sim
+    tree -L 2
     ├── asm
        ├── add
        ├── addi
