@@ -54,47 +54,46 @@ If you modify the assembly code and want to compile it(ensure your enviorment in
 # Assembly code for test each instruction  
 
     ├── asm
-    │   ├── add
-    │   ├── addi
-    │   ├── and
-    │   ├── andi
-    │   ├── auipc
-    │   ├── beq
-    │   ├── bge
-    │   ├── bgeu
-    │   ├── blt
-    │   ├── bltu
-    │   ├── bne
-    │   ├── jal
-    │   ├── jalr
-    │   ├── lb
-    │   ├── lbu
-    │   ├── lh
-    │   ├── lhu
-    │   ├── lui
-    │   ├── lw
-    │   ├── Makefile
-    │   ├── mul
-    │   ├── mulh
-    │   ├── mulhu
-    │   ├── or
-    │   ├── ori
-    │   ├── sb
-    │   ├── sh
-    │   ├── sll
-    │   ├── slli
-    │   ├── slt
-    │   ├── slti
-    │   ├── sltiu
-    │   ├── sltu
-    │   ├── sra
-    │   ├── srai
-    │   ├── srl
-    │   ├── srli
-    │   ├── sub
-    │   ├── sw
-    │   ├── xor
-    │   └── xori
+       ├── add
+       ├── addi
+       ├── and
+       ├── andi
+       ├── auipc
+       ├── beq
+       ├── bge
+       ├── bgeu
+       ├── blt
+       ├── bltu
+       ├── bne
+       ├── jal
+       ├── jalr
+       ├── lb
+       ├── lbu
+       ├── lh
+       ├── lhu
+       ├── lui
+       ├── lw
+       ├── mul
+       ├── mulh
+       ├── mulhu
+       ├── or
+       ├── ori
+       ├── sb
+       ├── sh
+       ├── sll
+       ├── slli
+       ├── slt
+       ├── slti
+       ├── sltiu
+       ├── sltu
+       ├── sra
+       ├── srai
+       ├── srl
+       ├── srli
+       ├── sub
+       ├── sw
+       ├── xor
+       └── xori
     
 # reference
 
