@@ -3,8 +3,13 @@
 unset bit_width
 unset input
 unset output
-objcopy="/home/DICS/M10912039/risc_de2115/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin//riscv64-unknown-elf-objcopy"
-bin2hex="/usr/local/bin/riscv64-unknown-elf-bin2hex"
+#objcopy="/home/DICS/M10912039/risc_de2115/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin//riscv64-unknown-elf-objcopy"
+objcopy="../../tools/gcc/riscv64-unknown-elf-objcopy"
+
+bin2hex="../../tools/gcc/riscv64-unknown-elf-bin2hex"
+
+
+#bin2hex="/usr/local/bin/riscv64-unknown-elf-bin2hex"
 while [[ "$1" != "" ]]
 do
     case "$1" in
