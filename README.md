@@ -25,7 +25,7 @@ To do:
 # Running simulation
 Support simulator: Irun,VCS,Icarus Verilog,Modelsim
     
-Irun(ncverilog):
+Irun(Ncverilog):
     
     cd ./sim
     make irun instr=add
